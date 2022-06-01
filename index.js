@@ -1,7 +1,16 @@
 import Color from './color.js';
 
-let test = new Color();
+$.ready(() => {
+  const testColor = new Color();
+  $('#testcolor').append(`<h2>${testColor.hex}</h2>`);
 
-console.log(test);
-console.log(test.shuffledHexCharArray());
-console.log(test.shuffledHexPairArray());
+  $('#testform').on('submit', (event) =>{
+    event.preventDefault();
+    let redinput = $('#redinput').val();
+    let greeninput = $('#redinput').val();
+    let blueinput = $('#redinput').val();
+    let checkString = (redinput + greeninput + blueinput == testColor.hex) ? 
+      'Correct!' : 'Wrong!';
+    alert(checkString);
+  });
+});

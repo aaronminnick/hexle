@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Hexle</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script scr="./index.js"></script>
+</head>
+<body>
+  <div id="testcolor"></div>
+  <form id="testform">
+    <label for="redinput">Red</label>
+    <input id="redinput" type="text" pattern="^[0-9a-fA-F]+$" maxlength="2">
+    <label for="greeninput">Green</label>
+    <input id="greeninput" type="text" pattern="^[0-9a-fA-F]+$" maxlength="2">
+    <label for="blueinput">Blue</label>
+    <input id="blueinput" type="text" pattern="^[0-9a-fA-F]+$" maxlength="2">
+    <button type="submit">Check</button>
+  </form>
+</body>
+</html>
