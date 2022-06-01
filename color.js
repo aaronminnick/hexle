@@ -1,13 +1,15 @@
 export default class Color {
   //TODO: generation should not allow for white, black, or colors which are too grey
-  //TODO: hex pairs need to prepend a 0 if value < 16"
   constructor() {
     this.red = Math.floor(Math.random()*255);
     this.redhex = this.red.toString(16);
+    if (this.redhex.length == 1) this.redhex = '0' + this.redhex;
     this.green = Math.floor(Math.random()*255);
     this.greenhex = this.green.toString(16);
+    if (this.greenhex.length == 1) this.greenhex = '0' + this.greenhex;
     this.blue = Math.floor(Math.random()*255);
     this.bluehex = this.blue.toString(16);
+    if (this.bluehex.length == 1) this.bluehex = '0' + this.bluehex;
     this.hex = this.redhex + this.greenhex + this.bluehex;
   }
 
