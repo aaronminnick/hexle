@@ -2,7 +2,9 @@
 
 $(function() {
   const testColor = new Color();
-  $('#testcolor').append(`<h2>${testColor.hex}</h2>`);
+  $('#testcolor').append(`
+  <h2>${testColor.hex}</h2>
+  <div style="background-color:#${testColor.hex};width:50px;height:50px;"</div>`);
 
   $('#testform').on('submit', (event) => {
     event.preventDefault();
