@@ -6,16 +6,15 @@
   <script src="./color.js"></script>
   <script src="./index.js"></script>
 </head>
-<!-- TODO: need to figure out validation for hex characters only -->
 <body>
   <div id="testcolor"></div>
   <form id="testform">
     <label for="redinput">Red</label>
-    <input id="redinput" type="text" pattern="^[0-9a-fA-F]{2}$" maxlength="2">
+    <input id="redinput" type="text" pattern="^[0-9a-fA-F]{2}$" maxlength="2" title="can only use valid hex characters (0-9, a-f)">
     <label for="greeninput">Green</label>
-    <input id="greeninput" type="text" pattern="^[0-9a-fA-F]{2}" maxlength="2">
+    <input id="greeninput" type="text" pattern="^[0-9a-fA-F]{2}" maxlength="2" title="can only use valid hex characters (0-9, a-f)">
     <label for="blueinput">Blue</label>
-    <input id="blueinput" type="text" pattern="^[0-9a-fA-F]{2}" maxlength="2">
+    <input id="blueinput" type="text" pattern="^[0-9a-fA-F]{2}" maxlength="2" title="can only use valid hex characters (0-9, a-f)">
     <button type="submit">Check</button>
   </form>
 </body>
