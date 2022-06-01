@@ -18,17 +18,16 @@ $(function() {
     let redinput = $('#redinput').val();
     let greeninput = $('#greeninput').val();
     let blueinput = $('#blueinput').val();
-    let checkString = (redinput + greeninput + blueinput == testColor.hex) ? 
-      'Correct!' : 'Wrong!';
-    alert(`
-    testColor.hex: ${testColor.hex}
-    input: ${redinput + greeninput + blueinput}
-    ${checkString}
-    `);
-    $('#redinput').val('');
-    $('#greeninput').val('');
-    $('#blueinput').val('');
-    location.reload();
+    let checkInput = (redinput + greeninput + blueinput == testColor.hex) ? true : false;
+    if (checkInput) {
+      alert('correct!');    
+      $('#redinput').val('');
+      $('#greeninput').val('');
+      $('#blueinput').val('');
+      location.reload();
+    } else {
+      alert('wrong, try again!')
+    };
   });
 });
 
