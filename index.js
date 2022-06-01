@@ -2,10 +2,16 @@
 
 $(function() {
   const testColor = new Color();
-  $('#testcolor').append(`
-  <h2>${testColor.hex}</h2>
-  <div style="background-color:#${testColor.hex};width:50px;height:50px;"</div>`);
+  $('#testcolor').append(`<div style="background-color:#${testColor.hex};width:50px;height:50px;"</div>`);
   console.log(testColor);
+
+  $('#easy').on('click', () => {
+    $('#hexarray').html(`<h2>${testColor.shuffledHexPairArray()}</h2>`);
+  });
+
+  $('#hard').on('click', () => {
+    $('#hexarray').html(`<h2>${testColor.shuffledHexCharArray()}</h2>`);
+  });
 
   $('#testform').on('submit', (event) => {
     event.preventDefault();
@@ -19,6 +25,10 @@ $(function() {
     input: ${redinput + greeninput + blueinput}
     ${checkString}
     `);
+    $('#redinput').val('');
+    $('#greeninput').val('');
+    $('#blueinput').val('');
+    location.reload();
   });
 });
 
