@@ -17,6 +17,18 @@ class GameColumn extends React.Component {
     super(props);
   }
 
+  submitGuess = (event) => {
+    event.preventDefault();
+    const guess = 
+      event.target.redinput1.value +
+      event.target.redinput2.value +
+      event.target.greeninput1.value +
+      event.target.greeninput2.value +
+      event.target.blueinput1.value +
+      event.target.blueinput2.value;
+    guesses.push(guess);
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -27,7 +39,7 @@ class GameColumn extends React.Component {
             <SixDigitGuessedRow guess={guess}
             key={index} />
           )}
-          <SixDigitInputRow />
+          <SixDigitInputRow submitFunc={this.submitGuess}/>
           <AnimationRow />
         </Col>
       </React.Fragment>
