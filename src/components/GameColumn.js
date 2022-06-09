@@ -18,7 +18,6 @@ class GameColumn extends React.Component {
   }
 
   submitGuess = (event) => {
-    console.log(event);
     event.preventDefault();
     const guess = 
       event.target[0].value +
