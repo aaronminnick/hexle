@@ -5,7 +5,7 @@ function AnimationRow() {
   return (
     <React.Fragment>
       <Row>
-
+        <p>placeholder for animation row</p>
       </Row>
     </React.Fragment>
   )
