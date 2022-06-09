@@ -18,14 +18,16 @@ class GameColumn extends React.Component {
   }
 
   submitGuess = (event) => {
+    console.log(event);
     event.preventDefault();
     const guess = 
-      event.target.redinput1.value +
-      event.target.redinput2.value +
-      event.target.greeninput1.value +
-      event.target.greeninput2.value +
-      event.target.blueinput1.value +
-      event.target.blueinput2.value;
+      event.target[0].value +
+      event.target[1].value +
+      event.target[2].value +
+      event.target[3].value +
+      event.target[4].value +
+      event.target[5].value;
+    console.log(guess);
     guesses.push(guess);
   }
 
